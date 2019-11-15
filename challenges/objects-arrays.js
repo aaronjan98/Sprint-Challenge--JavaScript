@@ -76,7 +76,7 @@ const graduates = [
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
-graduates.forEach(function (uni) {
+graduates.forEach((uni) => {
   universities.push(uni.university);
 });
 universities.sort();
@@ -127,7 +127,7 @@ The zoos want to display both the scientific name and the animal name in front o
 
 */
 const displayNames = [];
-zooAnimals.forEach(function(name){
+zooAnimals.forEach((name) => {
   displayNames.push(`${name.animal_name}, ${name.scientific_name}`);
 });
 console.log(displayNames);
@@ -139,7 +139,7 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 */
 
 const lowCaseAnimalNames = [];
-zooAnimals.map(function (zooAnimal, index, zooAnimals) {
+zooAnimals.map((zooAnimal, index, zooAnimals) => {
   lowCaseAnimalNames.push(zooAnimal.animal_name.toLowerCase());
 });
 console.log(lowCaseAnimalNames);
@@ -149,7 +149,11 @@ console.log(lowCaseAnimalNames);
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
 
 */
-const lowPopulationAnimals = [];
+
+const lowPopulationAnimals =  zooAnimals.filter((pop) => {
+  return pop.population < 5;
+});
+
 console.log(lowPopulationAnimals);
 
 /* Request 4: .reduce() 

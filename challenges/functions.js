@@ -26,7 +26,9 @@
 // Explain in your own words why nestedfunction can access the variable internal.
 
 // Explanation: 
-
+/* 
+Nested function can access the variable internal because if a variable can't be found inside the nestedFunction scope, the function will look for a variable being referenced in the outer, myFunction scope.
+*/ 
 
 const external = "I'm outside the function";
 
